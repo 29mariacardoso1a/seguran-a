@@ -1,0 +1,178 @@
+/* RESET E VARIÁVEIS DE ACESSIBILIDADE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor-fundo: #121212;
+  --cor-card: #1E1E1E;
+  --cor-texto: #FFFFFF;
+  --cor-destaque: #FFD700; /* Amarelo de alto contraste */
+  --cor-alerta: #FF6B6B;
+  --cor-foco: #00E5FF;
+  --fonte-principal: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-principal);
+  font-size: 22px; /* Fonte ampliada para facilitar a leitura */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ACESSIBILIDADE DE FOCO PARA TECLADO */
+a:focus, 
+button:focus, 
+summary:focus {
+  outline: 4px solid var(--cor-foco);
+  outline-offset: 4px;
+}
+
+/* CABEÇALHO */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--cor-card);
+  border-bottom: 5px solid var(--cor-destaque);
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: var(--cor-destaque);
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 1.3rem;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.introducao {
+  background-color: var(--cor-card);
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border-left: 8px solid var(--cor-destaque);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--cor-destaque);
+  margin-bottom: 20px;
+}
+
+/* CARDS DE DICAS (SANFONAS/ACORDEÃO SEM JAVASCRIPT) */
+.dica-card {
+  background-color: var(--cor-card);
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  overflow: hidden;
+}
+
+summary {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #2A2A2A;
+  color: var(--cor-texto);
+  list-style: none; /* Remove a seta padrão em alguns navegadores */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Indicador visual de clique */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "➕ Abrir";
+  font-size: 1rem;
+  background-color: var(--cor-destaque);
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+details[open] summary::after {
+  content: "➖ Fechar";
+  background-color: var(--cor-alerta);
+  color: #FFF;
+}
+
+details[open] summary {
+  border-bottom: 2px solid var(--cor-destaque);
+}
+
+.conteudo-dica {
+  padding: 25px;
+  font-size: 1.2rem;
+}
+
+.conteudo-dica ul {
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.conteudo-dica li {
+  margin-bottom: 10px;
+}
+
+.alerta-caixa {
+  background-color: #3d1414;
+  border: 2px solid var(--cor-alerta);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+/* BOTÃO DE EMERGÊNCIA / AJUDA */
+.secao-ajuda {
+  text-align: center;
+  margin-top: 40px;
+  background-color: var(--cor-card);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.btn-ajuda {
+  display: inline-block;
+  background-color: var(--cor-destaque);
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: none;
+  box-shadow: 0 4px 0 #b39700;
+}
+
+.btn-ajuda:hover {
+  background-color: #ffe033;
+}
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 1rem;
+  color: #AAA;
+}
