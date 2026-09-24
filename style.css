@@ -10,8 +10,8 @@
   --cor-card: #1E1E1E;
   --cor-texto: #FFFFFF;
   --cor-destaque: #FFD700; /* Amarelo de alto contraste */
-  --cor-alerta: #FF6B6B;
-  --cor-foco: #00E5FF;
+  --cor-alerta: #ff1010;
+  --cor-foco: #ff0000fa;
   --fonte-principal: Arial, Helvetica, sans-serif;
 }
 
@@ -95,6 +95,11 @@ summary {
 }
 
 /* Indicador visual de clique */
+ /* position relative; */
+/* top 50%; */
+/* left 50%; */
+/* transform translate(-50%,-50%); I */
+
 summary::-webkit-details-marker {
   display: none;
 }
