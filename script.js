@@ -10,5 +10,5 @@ function abreModal() {
 }
 
 function fechaModal() {
-   modal.style.diplay = "none";
+   modal.style.display = "none";
 }
